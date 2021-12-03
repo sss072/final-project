@@ -1,12 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { Home, Profile, SignIn } from './components'; 
+//'src\components\SignUp\SignUp.tsx'
 import reportWebVitals from './reportWebVitals';
+import './styles.css'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { FirebaseAppProvider, AuthCheck } from 'reactfire';
+import 'firebase/auth';
+import { firebaseConfig } from './firebaseConfig';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <FirebaseAppProvider firebaseConfig={firebaseConfig}>
+    <Router>
+      <Switch>
+
+        <Route exact path='/'>
+        <Home title={'By:Sami Sabeeh'}/>
+        </Route>
+
+        <Route exact path='/profile'>
+        <Profile></Profile>
+        </Route>
+
+        <Route exact path='/signin'>
+        <SignIn></SignIn>
+        </Route>
+
+      </Switch>
+    </Router>
+    </FirebaseAppProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
