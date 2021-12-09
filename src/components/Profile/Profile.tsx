@@ -1,8 +1,17 @@
 export const Profile = () =>{
-    return (
-        <div>
-            <h1>Profile Goes Here...</h1>
-        </div>
+    return(
+    <div className="wrapper">
+      <h1>Enter Your location</h1>
+      <form>
+      <fieldset>
+         <label>
+           <p>Location</p>
+           <input name="location" />
+         </label>
+       </fieldset>
+       <button type="submit">Submit</button>
+      </form>
+    </div>
     )
 }
 
@@ -11,10 +20,10 @@ export const Profile = () =>{
 // import { useState } from "react";
 // import ReactDOM from 'react-dom';
 
-// function MyForm() {
+// export function MyForm() {
 //   const [location, setLocation] = useState("");
 
-//   const handleSubmit = (event) => {
+//   const handleSubmit = (event:any) => {
 //     event.preventDefault();
 //     alert('The location you entered was: ${location}')
 //   }
