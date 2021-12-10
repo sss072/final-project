@@ -16,31 +16,42 @@ export const Profile = () =>{
 }
 
 
+// dont know how to grab data from submit form and use it to make api call using the functions below.
+//also i didnt use server.tsx as i thought i could just make the functions here without needing to create them seperately.
 
-// import { useState } from "react";
-// import ReactDOM from 'react-dom';
 
-// export function MyForm() {
-//   const [location, setLocation] = useState("");
+// let token = "5da5010b3446191cc7eaaf11e8835f9c"
+// export const server_calls = {
+//   get: async () => {
+//       const response = await fetch(`api.openweathermap.org/data/2.5/weather?q=${location}&appid=${token}`,{
+//           method: 'GET'
+//       });
+//       if (!response.ok){
+//           throw new Error('Failed to fetch your data from the server...')
+//       }
+//       return await response.json()
+//     },
+//   create: async(data: any = {}) => {
+//       const response = await fetch(`api.openweathermap.org/data/2.5/weather?q=${location}&appid=${token}`,{
+//           method: 'POST'
+//       });
+//       if(!response.ok){
+//           throw new Error('Failed to Create new data on server')
+//       }
 
-//   const handleSubmit = (event:any) => {
-//     event.preventDefault();
-//     alert('The location you entered was: ${location}')
+//       return await response.json()
 //   }
-
-//   return (
-//     <form onSubmit={handleSubmit}>
-//       <label>Enter your location:
-//         <input 
-//           type="text" 
-//           value={location}
-//           onChange={(e) => setLocation(e.target.value)}
-//         />
-//       </label>
-//       <input type="submit" />
-//     </form>
-//   )
 // }
+
+
+
+
+
+
+
+
+
+
 
 
 
